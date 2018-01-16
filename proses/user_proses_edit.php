@@ -4,7 +4,7 @@
 		include 'koneksi.php';
 		$nama = isset($_POST['nama']) ? $_POST['nama'] : '';
 		$email = isset($_POST['email']) ? $_POST['email'] : '';
-		$password = isset($_POST['password']) ? $_POST['password'] : '';
+		$password = isset($_POST['password']) ? md5($_POST['password']) : '';
 		
 		$id = isset($_POST['id']) ? $_POST['id'] : '';
 		// echo $nama.$email.$password.$id;

@@ -5,7 +5,7 @@
 		
 		$nama = isset($_POST['nama']) ? $_POST['nama'] : '';
 		$email = isset($_POST['email']) ? $_POST['email'] : '';
-		$password = isset($_POST['password']) ? $_POST['password'] : '';
+		$password = isset($_POST['password']) ? md5($_POST['password']) : '';
 		
 		if (!empty($nama) && !empty($email) && !empty($password)) {
 			mysqli_query($connect, "INSERT INTO user VALUES (null, '$nama', '$email', '$password')");
