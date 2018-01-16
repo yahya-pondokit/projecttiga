@@ -201,13 +201,13 @@ if(isset($_SESSION['login'])) {
                   <div class="col-sm-10">
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jenis" value="l" <?= ($row['jenis_kelamin'] = 'l' ) ?  'checked' : ''?>>
+                        <input type="radio" name="jenis" value="l" <?= ($row['jenis_kelamin'] == 'l' ) ?  'checked' : ''?>>
                         Laki - Laki
                       </label>
                     </div>
                     <div class="radio">
                       <label>
-                        <input type="radio" name="jenis" value="p" <?= ($row['jenis_kelamin'] = 'p' ) ? 'checked' : ''?>>
+                        <input type="radio" name="jenis" value="p" <?= ($row['jenis_kelamin'] == 'p' ) ? 'checked' : ''?>>
                         Perempuan
                       </label>
                     </div>
